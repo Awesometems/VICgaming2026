@@ -13,45 +13,12 @@ script = ExtResource("1_nt7q6")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1542381122]
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1080494622]
-offset_left = 68.0
-offset_top = 413.0
-offset_right = 1096.0
-offset_bottom = 695.0
-scale = Vector2(1, 0.69402665)
-color = Color(1, 1, 1, 0.24705882)
-
-[node name="TextEdit" type="TextEdit" parent="CanvasLayer" unique_id=1756104640]
-offset_left = 206.0
-offset_top = 482.0
-offset_right = 504.0
-offset_bottom = 537.0
-scale = Vector2(0.96, 1)
-text = "ACTION"
-
-[node name="arrowUp" type="Button" parent="CanvasLayer" unique_id=1665692353]
-offset_left = 521.0
-offset_top = 423.0
-offset_right = 529.0
-offset_bottom = 431.0
-scale = Vector2(8.028721, 7.066915)
-
-[node name="arrowDown" type="Button" parent="CanvasLayer" unique_id=1539864643]
-offset_left = 521.0
-offset_top = 533.0
-offset_right = 529.0
-offset_bottom = 541.0
-scale = Vector2(8.028721, 7.066915)
-
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer" unique_id=908070070]
-offset_left = 98.0
-offset_top = 426.00003
-offset_right = 176.07536
-offset_bottom = 464.64395
-scale = Vector2(0.88195634, 5.3296905)
-
-[node name="notebook" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1359195663]
-layout_mode = 2
+offset_left = 36.0
+offset_top = 9.999992
+offset_right = 117.636696
+offset_bottom = 43.781494
+scale = Vector2(0.88195634, 5.9500046)
 
 [node name="settings" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=781527972]
 layout_mode = 2
@@ -82,6 +49,17 @@ offset_bottom = 85.5
 grow_horizontal = 0
 grow_vertical = 2
 scale = Vector2(0.45513582, 0.5469628)
+
+[node name="roomName" type="Label" parent="CanvasLayer" unique_id=415075983]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -25.5
+offset_right = 25.5
+offset_bottom = 23.0
+grow_horizontal = 2
+scale = Vector2(4.040001, 2.5735154)
+text = "ROOM"
 
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/mainMenu" to="." method="_on_main_menu_pressed"]
 [connection signal="pressed" from="CanvasLayer/left" to="." method="_on_left_pressed"]

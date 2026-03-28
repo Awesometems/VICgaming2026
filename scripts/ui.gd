@@ -1,9 +1,11 @@
 extends Control
 
+@onready var room_name_label = $CanvasLayer/roomName
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	room_name_label.text = Map.room_names[Player.currentLocation]
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -20,3 +22,4 @@ func _on_right_pressed() -> void:
 
 func _on_left_pressed() -> void:
 	Player.move(Player.Direction.LEFT)
+	

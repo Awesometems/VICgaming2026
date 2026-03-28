@@ -5,6 +5,11 @@ var map = [
 	"res://scenes/passanger_cart.tscn"
 ]
 
+var room_names = {
+	"res://scenes/engineering_cart.tscn": "Engineering Cart",
+	"res://scenes/passanger_cart.tscn": "Passenger Cart"
+}
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
