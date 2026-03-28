@@ -74,20 +74,16 @@ size_flags_vertical = 0
 theme_override_font_sizes/font_size = 30
 text = "*"
 
-[node name="Label" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer" unique_id=1664171222]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 0
-theme_override_font_sizes/font_size = 10
-text = "Testing"
-autowrap_mode = 3
-
 [node name="end" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer" unique_id=1941245060]
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_font_sizes/font_size = 30
 text = "v
 "
+
+[node name="Label" type="RichTextLabel" parent="TextboxContainer/MarginContainer/HBoxContainer" unique_id=1870960159]
+layout_mode = 2
+bbcode_enabled = true
 
 [node name="right" type="AnimatedSprite2D" parent="." unique_id=1859460732]
 z_index = -1
