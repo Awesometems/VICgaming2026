@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cl42acdtrck84"]
+
+[ext_resource type="Texture2D" uid="uid://tmaquy4t3w6j" path="res://images/steampunk-city-artwork-concept-art-wallpaper-preview.jpg" id="1_mmwcc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_50cqm"]
+texture = ExtResource("1_mmwcc")
+
+[node name="PassangerCart" type="Node2D" unique_id=1891716662]
+
+[node name="Panel" type="Panel" parent="." unique_id=1893857888]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(27, 7.6800013)
+theme_override_styles/panel = SubResource("StyleBoxTexture_50cqm")

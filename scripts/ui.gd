@@ -13,3 +13,10 @@ func _process(delta: float) -> void:
 
 func _on_main_menu_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+
+
+func _on_right_pressed() -> void:
+	Player.move(Player.Direction.RIGHT)
+
+func _on_left_pressed() -> void:
+	Player.move(Player.Direction.LEFT)

@@ -59,4 +59,30 @@ layout_mode = 2
 [node name="mainMenu" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1765799728]
 layout_mode = 2
 
+[node name="left" type="Button" parent="CanvasLayer" unique_id=1719663688]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -85.5
+offset_right = 199.0
+offset_bottom = 85.5
+grow_vertical = 2
+scale = Vector2(0.45513582, 0.5469628)
+
+[node name="right" type="Button" parent="CanvasLayer" unique_id=61714058]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -92.0
+offset_top = -85.5
+offset_right = 107.0
+offset_bottom = 85.5
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.45513582, 0.5469628)
+
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/mainMenu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="CanvasLayer/left" to="." method="_on_left_pressed"]
+[connection signal="pressed" from="CanvasLayer/right" to="." method="_on_right_pressed"]
