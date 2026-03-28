@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://buncqqyc6keg0"
-path="res://.godot/imported/GCRANK.TTF-d2963be7cbddf222a4433c35e6891117.fontdata"
+path="res://.godot/imported/GCRANK.TTF-c236fba7755d4252d920474fd324e49f.fontdata"
 
 [deps]
 
-source_file="res://GCRANK.TTF"
-dest_files=["res://.godot/imported/GCRANK.TTF-d2963be7cbddf222a4433c35e6891117.fontdata"]
+source_file="res://fonts/GCRANK.TTF"
+dest_files=["res://.godot/imported/GCRANK.TTF-c236fba7755d4252d920474fd324e49f.fontdata"]
 
 [params]
 

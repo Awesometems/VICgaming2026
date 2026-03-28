@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://byjcyprlujvrh"]
 
+[ext_resource type="Script" uid="uid://cs2xt0f5n3ay8" path="res://scenes/main_menu.gd" id="1_bqqt6"]
 [ext_resource type="Texture2D" uid="uid://tmaquy4t3w6j" path="res://images/steampunk-city-artwork-concept-art-wallpaper-preview.jpg" id="1_l6cm7"]
-[ext_resource type="FontFile" uid="uid://buncqqyc6keg0" path="res://GCRANK.TTF" id="2_ekxnf"]
+[ext_resource type="FontFile" uid="uid://buncqqyc6keg0" path="res://fonts/GCRANK.TTF" id="2_ekxnf"]
+[ext_resource type="AudioStream" uid="uid://c81c32gg84c0l" path="res://music/Vgjsong1.mp3" id="2_wu84c"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7vrkn"]
 texture = ExtResource("1_l6cm7")
@@ -24,6 +26,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_bqqt6")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1897033680]
+position = Vector2(386.00003, 411.87808)
+scale = Vector2(0.8534616, 0.837025)
+stream = ExtResource("2_wu84c")
+autoplay = true
 
 [node name="Panel" type="Panel" parent="." unique_id=611818357]
 layout_mode = 1
@@ -97,3 +106,7 @@ theme_override_font_sizes/font_size = 110
 text = "Steam "
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_exit_pressed"]
