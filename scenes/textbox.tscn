@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://btp3t8ufchi41"]
+[gd_scene format=3 uid="uid://do28rq26nkphi"]
 
-[ext_resource type="Script" path="res://Scripts/textbox.gd" id="1_psw4q"]
+[ext_resource type="Script" uid="uid://cl6fr2gxg4j47" path="res://Scripts/textbox.gd" id="1_psw4q"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_axoti"]
 bg_color = Color(0, 0, 0, 1)
@@ -74,16 +74,22 @@ size_flags_vertical = 0
 theme_override_font_sizes/font_size = 30
 text = "*"
 
-[node name="end" type="Label" parent="TextboxContainer/MarginContainer/HBoxContainer" unique_id=1941245060]
-layout_mode = 2
-size_flags_vertical = 8
-theme_override_font_sizes/font_size = 30
-text = "v
-"
-
 [node name="Label" type="RichTextLabel" parent="TextboxContainer/MarginContainer/HBoxContainer" unique_id=1870960159]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
 bbcode_enabled = true
+fit_content = true
+
+[node name="end" type="RichTextLabel" parent="TextboxContainer/MarginContainer/HBoxContainer" unique_id=1776439254]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "v"
+fit_content = true
+autowrap_mode = 0
+autowrap_trim_flags = 0
 
 [node name="right" type="AnimatedSprite2D" parent="." unique_id=1859460732]
 z_index = -1

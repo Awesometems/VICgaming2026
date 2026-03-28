@@ -1,13 +1,13 @@
 extends Control
-
+@onready var label: CanvasLayer = $"../Textbox"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	label.queue_text("[wave]Make sure to get the [color=#F6CD26][KEY][/color] from the drawer.","default","default",0)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 

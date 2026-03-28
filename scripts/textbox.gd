@@ -4,8 +4,8 @@ extends CanvasLayer
 signal still
 @onready var textbox_container: MarginContainer = $TextboxContainer
 @onready var start: Label = $TextboxContainer/MarginContainer/HBoxContainer/start
-@onready var end: Label = $TextboxContainer/MarginContainer/HBoxContainer/end
-@onready var label: Label = $TextboxContainer/MarginContainer/HBoxContainer/Label
+@onready var end: RichTextLabel = $TextboxContainer/MarginContainer/HBoxContainer/end
+@onready var label: RichTextLabel = $TextboxContainer/MarginContainer/HBoxContainer/Label
 @onready var tween = get_tree().create_tween()
 
 var reading = 0
@@ -56,13 +56,12 @@ var pose
 # changes the textbox text and manages sprites per queue entry
 func display_text():
 	#two tweens, one for sprites one for text box
-	tween = get_tree().create_tween()
 	var anim = get_tree().create_tween()
 	var next_text = text_queue.pop_front()
 	
 	#index 0 contains text to display
 	label.text = next_text[0]
-	label.visible_characters = -1
+	label.visible_ratio = 0.0
 	#reading state allows text to be skipped
 	change_state(State.READING)
 	show_box()
@@ -80,17 +79,18 @@ func display_text():
 		anim.parallel().tween_property($left, "modulate:a", 1, .5).from($left.modulate.a)
 		front = 0
 	#tweening text to display
-	tween.tween_property(label, "visible_characters", len(label.text), len(label.text) * char_read_rate).from(0).finished
+	tween = get_tree().create_tween()
+	tween.tween_property(label, "visible_ratio", 1.0, label.get_total_character_count() * char_read_rate).from(0.0)
 	tween.connect("finished", on_tween_finished)
 
 	end.text = "..." 
 #gets textbo ready for next text
 func on_tween_finished():
-	end.text = "v"
+	end.text = "[wave]v"
 	change_state(State.FINISHED)
 	
 	#contains state machine for textbox
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	match current_state:
 		#gets text if there queue isnt empty and freezes screen
 		State.READY:
@@ -103,8 +103,8 @@ func _process(delta: float) -> void:
 		State.READING:
 			if Input.is_action_just_pressed("interact"):
 				tween.kill()
-				label.visible_characters = -1
-				end.text = "v"
+				label.visible_ratio = 1.0
+				end.text = "[wave]v"
 				change_state(State.FINISHED)
 			#checks if queue is empty to close textbox. if not, goes back to ready
 		State.FINISHED:
