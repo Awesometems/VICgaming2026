@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://byjcyprlujvrh"]
 
-[ext_resource type="Script" uid="uid://cs2xt0f5n3ay8" path="res://scenes/main_menu.gd" id="1_bqqt6"]
+[ext_resource type="Script" uid="uid://cs2xt0f5n3ay8" path="res://scripts/main_menu.gd" id="1_bqqt6"]
 [ext_resource type="Texture2D" uid="uid://tmaquy4t3w6j" path="res://images/steampunk-city-artwork-concept-art-wallpaper-preview.jpg" id="1_l6cm7"]
 [ext_resource type="FontFile" uid="uid://buncqqyc6keg0" path="res://fonts/GCRANK.TTF" id="2_ekxnf"]
 [ext_resource type="AudioStream" uid="uid://c81c32gg84c0l" path="res://music/Vgjsong1.mp3" id="2_wu84c"]
