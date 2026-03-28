@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cufqhqx5kbgp7"]
+
+[ext_resource type="PackedScene" uid="uid://78tvmu4nh2ki" path="res://scenes/ui.tscn" id="1_xhrsd"]
+
+[node name="RoomTender" type="Node2D" unique_id=2033110420]
+
+[node name="Ui" parent="." unique_id=678580204 instance=ExtResource("1_xhrsd")]

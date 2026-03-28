@@ -12,7 +12,7 @@ var notebook = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	currentLocation = "res://scenes/engineering_cart.tscn"
+	currentLocation = "res://scenes/room_engineering_cart.tscn"
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

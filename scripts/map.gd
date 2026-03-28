@@ -1,13 +1,22 @@
 extends Node
 
 var map = [
-	"res://scenes/engineering_cart.tscn",
-	"res://scenes/passanger_cart.tscn"
+	"res://scenes/room_engine.tscn",
+	"res://scenes/room_tender.tscn",
+	"res://scenes/room_engineering_cart.tscn",
+	"res://scenes/room_passenger_cart.tscn",
+	"res://scenes/room_jungle.tscn"
+	
+	
 ]
 
 var room_names = {
-	"res://scenes/engineering_cart.tscn": "Engineering Cart",
-	"res://scenes/passanger_cart.tscn": "Passenger Cart"
+	"res://scenes/room_engineering_cart.tscn": "Engineering Cart",
+	"res://scenes/room_passenger_cart.tscn": "Passenger Cart",
+	"res://scenes/room_tender.tscn": "Tender",
+	"res://scenes/room_engine.tscn": "The Engine",
+	"res://scenes/room_jungle.tscn": "The Garden"
+	
 }
 
 # Called when the node enters the scene tree for the first time.

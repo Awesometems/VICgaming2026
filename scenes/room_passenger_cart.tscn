@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cl42acdtrck84"]
+
+[ext_resource type="PackedScene" uid="uid://78tvmu4nh2ki" path="res://scenes/ui.tscn" id="1_3gdin"]
+
+[node name="PassangerCart" type="Node2D" unique_id=1891716662]
+
+[node name="Ui" parent="." unique_id=678580204 instance=ExtResource("1_3gdin")]
