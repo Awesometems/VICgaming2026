@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://78tvmu4nh2ki"]
+
+[node name="Ui" type="Control" unique_id=678580204]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1542381122]
+
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=1359195663]
+offset_left = 194.44144
+offset_top = 459.0
+offset_right = 202.44144
+offset_bottom = 467.0
+scale = Vector2(-7.430179, 6.5338516)
+
+[node name="Button2" type="Button" parent="CanvasLayer" unique_id=781527972]
+offset_left = 194.44144
+offset_top = 517.0
+offset_right = 202.44144
+offset_bottom = 525.0
+scale = Vector2(-7.430179, 6.5338516)
+
+[node name="Button3" type="Button" parent="CanvasLayer" unique_id=1765799728]
+offset_left = 194.44144
+offset_top = 573.0
+offset_right = 202.44144
+offset_bottom = 581.0
+scale = Vector2(-7.430179, 6.5338516)
