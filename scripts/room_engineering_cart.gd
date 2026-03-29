@@ -8,10 +8,12 @@ func _ready() -> void:
 	player_instance = player_scene.instantiate()
 	$"..".add_child(player_instance)
 	
+	# left door just entered, spawn char in right door
 	if Tracking.door_entered == 1:
-		player_instance.set_position($Door.position - Vector2(30, 0))
+		player_instance.set_position($Door.position - Vector2(40, -120))
+	# right door just entered, spawn char in right door
 	else:
-		player_instance.set_position($Door2.position + Vector2(30, 0))
+		player_instance.set_position($Door2.position + Vector2(-40, -120))
 		
 	
 	if !Tracking.crowbar:
