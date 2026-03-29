@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://xk523lyapewu"]
 
 [ext_resource type="Texture2D" uid="uid://deq85uqxoxbhx" path="res://assets/duckidle1.png" id="1_g2els"]
+[ext_resource type="Script" uid="uid://1dtt70nmo7wt" path="res://scenes/duck.gd" id="1_qhqgy"]
 [ext_resource type="Texture2D" uid="uid://d2c8424auqdej" path="res://assets/duckie-Sheet.png" id="2_qhqgy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
@@ -80,6 +81,7 @@ animations = [{
 }]
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1541312863]
+script = ExtResource("1_qhqgy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=282352399]
 sprite_frames = SubResource("SpriteFrames_jej6c")
