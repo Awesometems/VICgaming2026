@@ -1,9 +1,14 @@
-[gd_scene format=3 uid="uid://fq34mffkuflc"]
+[gd_scene format=3 uid="uid://cl42acdtrck84"]
 
 [ext_resource type="PackedScene" uid="uid://78tvmu4nh2ki" path="res://scenes/ui.tscn" id="1_3gdin"]
+[ext_resource type="Script" uid="uid://ck1qlvfjw6c5n" path="res://scripts/room_passenger_cart.gd" id="1_16v7m"]
 [ext_resource type="Texture2D" uid="uid://qpeig6pte4xx" path="res://assets/passenger.png" id="1_kiq02"]
+[ext_resource type="Texture2D" uid="uid://d0kgd2x4bwd72" path="res://assets/seat1.png" id="4_pj57o"]
+[ext_resource type="Texture2D" uid="uid://nl87j4eujvs8" path="res://assets/seat2.png" id="5_16v7m"]
+[ext_resource type="Texture2D" uid="uid://dhee73jyfb02k" path="res://assets/seat3.png" id="6_3dmfg"]
 
 [node name="PassangerCart" type="Node2D" unique_id=1891716662]
+script = ExtResource("1_16v7m")
 
 [node name="Passenger" type="Sprite2D" parent="." unique_id=943796649]
 position = Vector2(577, 326)
@@ -11,3 +16,56 @@ scale = Vector2(0.6, 0.6)
 texture = ExtResource("1_kiq02")
 
 [node name="Ui" parent="." unique_id=678580204 instance=ExtResource("1_3gdin")]
+visible = false
+
+[node name="Border" type="Node2D" parent="." unique_id=1422222591]
+
+[node name="border" type="StaticBody2D" parent="Border" unique_id=2140545501]
+position = Vector2(3, 3)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Border/border" unique_id=515217493]
+position = Vector2(-1, 0)
+polygon = PackedVector2Array(188, 434, 282, 438, 232, 485, 397, 498, 439, 454, 535, 457, 504, 500, 670, 512, 694, 463, 774, 468, 765, 515, 956, 526, 955, 477, 1063, 485, 1113, 644, 1159, 643, 1208, 632, 1158, -3, -1, 0, -24, 686, 1154, 674, 1187, 646, 398, 614, 299, 610, 272.153, 645.99994, 1, 646, -1, 534)
+
+[node name="seat1" type="StaticBody2D" parent="Border" unique_id=1606870204]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Border/seat1" unique_id=597869539]
+polygon = PackedVector2Array(91, 554, 134, 539, 334, 551, 300, 584, 301, 646, 91, 646)
+
+[node name="seat3" type="StaticBody2D" parent="Border" unique_id=295701331]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Border/seat3" unique_id=134030056]
+polygon = PackedVector2Array(748, 591, 752, 576, 957, 586, 961, 644, 747, 645)
+
+[node name="seat2" type="StaticBody2D" parent="Border" unique_id=220754294]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Border/seat2" unique_id=1240455423]
+position = Vector2(316, 11)
+polygon = PackedVector2Array(109, 558, 129, 538, 332, 554, 312, 589, 306, 634, 110, 633)
+
+[node name="Seat1" type="Sprite2D" parent="." unique_id=417232133]
+position = Vector2(227, 430.99997)
+scale = Vector2(0.606, 0.606)
+texture = ExtResource("4_pj57o")
+
+[node name="Seat2" type="Sprite2D" parent="." unique_id=1060026358]
+position = Vector2(530, 446)
+scale = Vector2(0.606, 0.606)
+texture = ExtResource("5_16v7m")
+
+[node name="Seat3" type="Sprite2D" parent="." unique_id=381659161]
+position = Vector2(849, 439)
+scale = Vector2(0.60558254, 0.6055826)
+texture = ExtResource("6_3dmfg")
+
+[node name="ZindexCollisions" type="Area2D" parent="." unique_id=391743855]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ZindexCollisions" unique_id=1140040895]
+polygon = PackedVector2Array(247, 550, 356, 559, 265, 647, 161, 644)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="ZindexCollisions" unique_id=1758334325]
+position = Vector2(320, -6)
+polygon = PackedVector2Array(259, 566, 339, 573, 301, 654, 211, 651)
+
+[connection signal="body_entered" from="ZindexCollisions" to="." method="_on_zindex_collisions_body_entered"]
+[connection signal="body_exited" from="ZindexCollisions" to="." method="_on_zindex_collisions_body_exited"]

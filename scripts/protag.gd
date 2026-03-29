@@ -58,7 +58,7 @@ func animation(delta: float) -> void:
 		# depth scaling calculation
 		depth_y += velocity.y * delta
 		var scale_multiplier = 1.0 + depth_y * SCALE_FACTOR
-		scale_multiplier = clamp(scale_multiplier, 0.5, 2.0)
+		scale_multiplier = clamp(scale_multiplier, 0.7, 2.0)
 		scale = initial_scale * scale_multiplier
 	else:
 		$AnimatedSprite2D.frame = 0
