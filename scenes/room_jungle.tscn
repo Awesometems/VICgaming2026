@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://crdab8ch2hvbx" path="res://assets/jungle.png" id="1_hgdth"]
 [ext_resource type="PackedScene" uid="uid://78tvmu4nh2ki" path="res://scenes/ui.tscn" id="1_xl3cm"]
+[ext_resource type="PackedScene" uid="uid://do28rq26nkphi" path="res://scenes/textbox.tscn" id="3_h0ygc"]
 
 [node name="RoomJungle" type="Node2D" unique_id=1796393975]
 
@@ -11,3 +12,10 @@ scale = Vector2(0.6, 0.6)
 texture = ExtResource("1_hgdth")
 
 [node name="Ui" parent="." unique_id=678580204 instance=ExtResource("1_xl3cm")]
+
+[node name="Button" type="Button" parent="Ui" unique_id=522845190]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Textbox" parent="." unique_id=1069674369 instance=ExtResource("3_h0ygc")]
