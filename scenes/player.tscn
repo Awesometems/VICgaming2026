@@ -1,11 +1,7 @@
-[gd_scene format=3 uid="uid://clv17gs1le31g"]
+[gd_scene format=3 uid="uid://xk523lyapewu"]
 
 [ext_resource type="Texture2D" uid="uid://deq85uqxoxbhx" path="res://assets/duckidle1.png" id="1_g2els"]
-<<<<<<< Updated upstream
-[ext_resource type="Script" uid="uid://1dtt70nmo7wt" path="res://scenes/duck.gd" id="1_qhqgy"]
-=======
 [ext_resource type="Script" uid="uid://dbmno6segwutv" path="res://scripts/protag.gd" id="1_qhqgy"]
->>>>>>> Stashed changes
 [ext_resource type="Texture2D" uid="uid://d2c8424auqdej" path="res://assets/duckie-Sheet.png" id="2_qhqgy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
@@ -84,14 +80,12 @@ animations = [{
 "speed": 5.0
 }]
 
-<<<<<<< Updated upstream
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1541312863]
-=======
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qhqgy"]
-size = Vector2(14, 7)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qhqgy"]
+radius = 3.6666667
+height = 13.555555
 
 [node name="Protagonist" type="CharacterBody2D" unique_id=1541312863]
->>>>>>> Stashed changes
+scale = Vector2(6, 6)
 script = ExtResource("1_qhqgy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=282352399]
@@ -103,4 +97,5 @@ frame_progress = 0.2638888
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=258818482]
 position = Vector2(-1, 20)
-shape = SubResource("RectangleShape2D_qhqgy")
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_qhqgy")
