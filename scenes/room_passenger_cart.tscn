@@ -78,6 +78,7 @@ polygon = PackedVector2Array(247, 550, 356, 559, 265, 647, 161, 644)
 position = Vector2(320, -6)
 polygon = PackedVector2Array(259, 566, 339, 573, 301, 654, 211, 651)
 
+[connection signal="on_door_entered" from="Door" to="Ui" method="_on_door_on_door_entered"]
 [connection signal="on_door_entered" from="Door2" to="Ui" method="_on_door_2_on_door_entered"]
 [connection signal="body_entered" from="ZindexCollisions" to="." method="_on_zindex_collisions_body_entered"]
 [connection signal="body_exited" from="ZindexCollisions" to="." method="_on_zindex_collisions_body_exited"]
