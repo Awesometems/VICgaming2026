@@ -1,7 +1,13 @@
-[gd_scene format=3 uid="uid://cufqhqx5kbgp7"]
+[gd_scene format=3 uid="uid://ch43jyqnap3x1"]
 
+[ext_resource type="Texture2D" uid="uid://cvmhbo3x7no6y" path="res://assets/tender.png" id="1_rolk5"]
 [ext_resource type="PackedScene" uid="uid://78tvmu4nh2ki" path="res://scenes/ui.tscn" id="1_xhrsd"]
 
 [node name="RoomTender" type="Node2D" unique_id=2033110420]
+
+[node name="Tender" type="Sprite2D" parent="." unique_id=875922393]
+position = Vector2(580, 324)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_rolk5")
 
 [node name="Ui" parent="." unique_id=678580204 instance=ExtResource("1_xhrsd")]

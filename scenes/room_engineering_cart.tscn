@@ -1,9 +1,15 @@
-[gd_scene format=3 uid="uid://dns20g3rfo80f"]
+[gd_scene format=3 uid="uid://biti701nv4jry"]
 
+[ext_resource type="Texture2D" uid="uid://kx5qiltotbqa" path="res://assets/engineering.png" id="1_4xg0k"]
 [ext_resource type="PackedScene" uid="uid://78tvmu4nh2ki" path="res://scenes/ui.tscn" id="1_rtcog"]
 [ext_resource type="PackedScene" uid="uid://do28rq26nkphi" path="res://scenes/textbox.tscn" id="2_y6tbi"]
 
 [node name="EngineeringCart" type="Node2D" unique_id=649145467]
+
+[node name="Engineering" type="Sprite2D" parent="." unique_id=1036264766]
+position = Vector2(577, 326)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_4xg0k")
 
 [node name="Ui" parent="." unique_id=678580204 instance=ExtResource("1_rtcog")]
 

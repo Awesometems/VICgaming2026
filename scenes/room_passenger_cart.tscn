@@ -1,7 +1,13 @@
-[gd_scene format=3 uid="uid://cl42acdtrck84"]
+[gd_scene format=3 uid="uid://fq34mffkuflc"]
 
 [ext_resource type="PackedScene" uid="uid://78tvmu4nh2ki" path="res://scenes/ui.tscn" id="1_3gdin"]
+[ext_resource type="Texture2D" uid="uid://qpeig6pte4xx" path="res://assets/passenger.png" id="1_kiq02"]
 
 [node name="PassangerCart" type="Node2D" unique_id=1891716662]
+
+[node name="Passenger" type="Sprite2D" parent="." unique_id=943796649]
+position = Vector2(577, 326)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_kiq02")
 
 [node name="Ui" parent="." unique_id=678580204 instance=ExtResource("1_3gdin")]
