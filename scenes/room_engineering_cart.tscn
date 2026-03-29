@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dns20g3rfo80f"]
+[gd_scene format=3 uid="uid://biti701nv4jry"]
 
 [ext_resource type="Texture2D" uid="uid://kx5qiltotbqa" path="res://assets/engineering.png" id="1_4xg0k"]
 [ext_resource type="Script" uid="uid://dv7j03yb5cq7o" path="res://scripts/room_engineering_cart.gd" id="1_c64xs"]
@@ -6,8 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://do28rq26nkphi" path="res://scenes/textbox.tscn" id="2_y6tbi"]
 [ext_resource type="PackedScene" uid="uid://xk523lyapewu" path="res://scenes/player.tscn" id="4_i00n2"]
 [ext_resource type="Texture2D" uid="uid://bgl3421njkqkd" path="res://assets/crowbar.png" id="5_5hqh7"]
-[ext_resource type="PackedScene" uid="uid://dkvkc3e86x1m1" path="res://scenes/door.tscn" id="6_v57dg"]
-[ext_resource type="Texture2D" uid="uid://c60edmdu3oalv" path="res://assets/brokendove.png" id="7_5ucgq"]
+[ext_resource type="PackedScene" path="res://scenes/door.tscn" id="6_v57dg"]
+[ext_resource type="Texture2D" uid="uid://bo8rrukxnfvt8" path="res://assets/duckded.png" id="8_v57dg"]
 
 [node name="EngineeringCart" type="Node2D" unique_id=649145467]
 script = ExtResource("1_c64xs")
@@ -48,9 +48,9 @@ visible = false
 polygon = PackedVector2Array(172, 447, 230, 447, 257, 436, 908, 437, 926, 449, 1003, 448, 1137, 652, 1153, 650, 1158, -3, -1, 0, 4, 681, 1154, 674, 1187, 646, 31, 647)
 
 [node name="Brokendove" type="Sprite2D" parent="." unique_id=1154331055]
-position = Vector2(977, 566)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("7_5ucgq")
+position = Vector2(977, 516)
+scale = Vector2(5, 5)
+texture = ExtResource("8_v57dg")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button" to="Ui" method="_on_button_pressed"]

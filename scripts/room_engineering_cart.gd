@@ -12,11 +12,10 @@ func _ready() -> void:
 		player_instance.set_position($Door.position - Vector2(30, 0))
 	else:
 		player_instance.set_position($Door2.position + Vector2(30, 0))
-		
-	
 	if !Tracking.crowbar:
 		$Button.disabled = false
 		$Button.visible = true
+
 
 
 func _on_button_mouse_entered() -> void:
