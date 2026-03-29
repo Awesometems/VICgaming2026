@@ -2,9 +2,18 @@ extends Control
 
 @onready var room_name_label = $CanvasLayer/roomName
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready() -> void:
 	room_name_label.text = Map.room_names[Player.currentLocation]
+	if !Tracking.crowbar:
+		$crowbar.disabled = true
+		$crowbar.visible = false
+	if !Tracking.key:
+		$key.disabled = true
+		$key.visible = false
+	if !Tracking.gear:
+		$gear.disabled = true
+		$gear.visible = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bd7ao8djehc31" path="res://scripts/ui.gd" id="1_nt7q6"]
 [ext_resource type="Texture2D" uid="uid://8jgirtlet3lq" path="res://assets/ui.png" id="2_wm3ai"]
 [ext_resource type="Texture2D" uid="uid://bgl3421njkqkd" path="res://assets/crowbar.png" id="3_8dubc"]
+[ext_resource type="Script" uid="uid://clymhe843tgn4" path="res://scripts/tracking.gd" id="3_p7vwb"]
 [ext_resource type="Texture2D" uid="uid://o0230cgnj7oc" path="res://assets/key.png" id="4_p7vwb"]
 [ext_resource type="Texture2D" uid="uid://siwwtjtl6xdj" path="res://assets/puzzle1gear.png" id="5_ktti3"]
 
@@ -58,18 +59,21 @@ scale = Vector2(0.45513582, 0.5469628)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -72.0
-offset_top = 28.999998
-offset_right = -21.0
-offset_bottom = 52.0
+offset_left = -35.0
+offset_top = 37.0
+offset_right = 16.0
+offset_bottom = 60.0
 grow_horizontal = 2
-scale = Vector2(4.040001, 2.5735154)
+scale = Vector2(2, 2)
 text = "ROOM"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Ui" type="Sprite2D" parent="." unique_id=1737250746]
 position = Vector2(611, 64)
 scale = Vector2(2, 2)
 texture = ExtResource("2_wm3ai")
+script = ExtResource("3_p7vwb")
 
 [node name="crowbar" type="Button" parent="." unique_id=1707284237]
 layout_mode = 0
