@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://do28rq26nkphi" path="res://scenes/textbox.tscn" id="2_y6tbi"]
 [ext_resource type="PackedScene" uid="uid://xk523lyapewu" path="res://scenes/player.tscn" id="4_i00n2"]
 [ext_resource type="Texture2D" uid="uid://bgl3421njkqkd" path="res://assets/crowbar.png" id="5_5hqh7"]
+[ext_resource type="Texture2D" uid="uid://c60edmdu3oalv" path="res://assets/brokendove.png" id="7_5ucgq"]
 
 [node name="EngineeringCart" type="Node2D" unique_id=649145467]
 script = ExtResource("1_c64xs")
@@ -28,6 +29,7 @@ flat = true
 position = Vector2(516, 439)
 
 [node name="Ui" parent="." unique_id=678580204 instance=ExtResource("1_rtcog")]
+visible = false
 
 [node name="Textbox" parent="." unique_id=1069674369 instance=ExtResource("2_y6tbi")]
 visible = false
@@ -36,6 +38,11 @@ visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1408775315]
 polygon = PackedVector2Array(172, 447, 230, 447, 257, 436, 908, 437, 926, 449, 1003, 448, 1137, 652, 1153, 650, 1158, -3, -1, 0, 4, 681, 1154, 674, 1187, 646, 31, 647)
+
+[node name="Brokendove" type="Sprite2D" parent="." unique_id=1154331055]
+position = Vector2(977, 566)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_5ucgq")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button" to="Ui" method="_on_button_pressed"]
