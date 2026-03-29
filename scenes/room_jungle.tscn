@@ -1,7 +1,13 @@
-[gd_scene format=3 uid="uid://b0mewnb2a3ldu"]
+[gd_scene format=3 uid="uid://buo3spmp3oa2j"]
 
+[ext_resource type="Texture2D" uid="uid://crdab8ch2hvbx" path="res://assets/jungle.png" id="1_hgdth"]
 [ext_resource type="PackedScene" uid="uid://78tvmu4nh2ki" path="res://scenes/ui.tscn" id="1_xl3cm"]
 
 [node name="RoomJungle" type="Node2D" unique_id=1796393975]
+
+[node name="Jungle" type="Sprite2D" parent="." unique_id=1555706941]
+position = Vector2(581, 320)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_hgdth")
 
 [node name="Ui" parent="." unique_id=678580204 instance=ExtResource("1_xl3cm")]

@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://78tvmu4nh2ki"]
 
 [ext_resource type="Script" uid="uid://bd7ao8djehc31" path="res://scripts/ui.gd" id="1_nt7q6"]
+[ext_resource type="Texture2D" uid="uid://8jgirtlet3lq" path="res://assets/ui.png" id="2_wm3ai"]
+[ext_resource type="Texture2D" uid="uid://bgl3421njkqkd" path="res://assets/crowbar.png" id="3_8dubc"]
+[ext_resource type="Texture2D" uid="uid://o0230cgnj7oc" path="res://assets/key.png" id="4_p7vwb"]
+[ext_resource type="Texture2D" uid="uid://siwwtjtl6xdj" path="res://assets/puzzle1gear.png" id="5_ktti3"]
 
 [node name="Ui" type="Control" unique_id=678580204]
 layout_mode = 3
@@ -54,12 +58,48 @@ scale = Vector2(0.45513582, 0.5469628)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -25.5
-offset_right = 25.5
-offset_bottom = 23.0
+offset_left = -72.0
+offset_top = 28.999998
+offset_right = -21.0
+offset_bottom = 52.0
 grow_horizontal = 2
 scale = Vector2(4.040001, 2.5735154)
 text = "ROOM"
+
+[node name="Ui" type="Sprite2D" parent="." unique_id=1737250746]
+position = Vector2(611, 64)
+scale = Vector2(2, 2)
+texture = ExtResource("2_wm3ai")
+
+[node name="crowbar" type="Button" parent="." unique_id=1707284237]
+layout_mode = 0
+offset_left = 186.0
+offset_top = 17.0
+offset_right = 210.0
+offset_bottom = 41.0
+scale = Vector2(3, 3)
+icon = ExtResource("3_8dubc")
+flat = true
+
+[node name="key" type="Button" parent="." unique_id=886251167]
+layout_mode = 0
+offset_left = 264.0
+offset_top = 19.0
+offset_right = 288.0
+offset_bottom = 43.0
+scale = Vector2(3, 3)
+icon = ExtResource("4_p7vwb")
+flat = true
+
+[node name="gear" type="Button" parent="." unique_id=647628825]
+layout_mode = 0
+offset_left = 343.0
+offset_top = 13.0
+offset_right = 479.0
+offset_bottom = 149.0
+scale = Vector2(0.6, 0.6)
+icon = ExtResource("5_ktti3")
+flat = true
 
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/mainMenu" to="." method="_on_main_menu_pressed"]
 [connection signal="pressed" from="CanvasLayer/left" to="." method="_on_left_pressed"]

@@ -3,12 +3,19 @@
 [ext_resource type="Script" uid="uid://7w51fhoymgtd" path="res://scripts/gear_puzzle.gd" id="1_ccke3"]
 [ext_resource type="Texture2D" uid="uid://siwwtjtl6xdj" path="res://assets/puzzle1gear.png" id="1_voev6"]
 [ext_resource type="PackedScene" uid="uid://dc2bnrgv3jxor" path="res://scenes/puzzle_piece.tscn" id="2_g7eoe"]
+[ext_resource type="Texture2D" uid="uid://c817xuywlf5by" path="res://assets/page.png" id="2_sye7v"]
 
 [node name="GearPuzzle" type="Node2D" unique_id=675974120]
 script = ExtResource("1_ccke3")
 
-[node name="Puzzle1Gear" type="Sprite2D" parent="." unique_id=98238406]
-position = Vector2(48, 53)
+[node name="Page" type="Sprite2D" parent="." unique_id=1123517865]
+position = Vector2(81, 89)
+scale = Vector2(1.2222222, 1.164)
+texture = ExtResource("2_sye7v")
+
+[node name="Puzzle1Gear" type="Sprite2D" parent="Page" unique_id=98238406]
+position = Vector2(9, 6.2285233)
+scale = Vector2(0.8181819, 0.85910654)
 texture = ExtResource("1_voev6")
 
 [node name="PuzzlePiece" parent="." unique_id=326687614 instance=ExtResource("2_g7eoe")]

@@ -1,0 +1,194 @@
+[gd_scene format=3 uid="uid://bvkdcp0lmlxyt"]
+
+[ext_resource type="Script" uid="uid://btfypo26dxhut" path="res://scripts/lock.gd" id="1_40mgl"]
+[ext_resource type="Script" uid="uid://chcrdxfsvex6m" path="res://scripts/checklock.gd" id="1_hpkde"]
+[ext_resource type="Texture2D" uid="uid://bhdrh7tbr3cpn" path="res://assets/up.png" id="2_hpkde"]
+[ext_resource type="Texture2D" uid="uid://p0q0kxd0dvji" path="res://assets/down.png" id="3_mx35c"]
+
+[node name="Lock" type="Control" unique_id=1442228711]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_hpkde")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=713303788]
+layout_mode = 0
+offset_right = 500.0
+offset_bottom = 250.0
+color = Color(0.7490196, 0.7529412, 0.7411765, 1)
+
+[node name="1" type="ColorRect" parent="." unique_id=1137562794]
+layout_mode = 0
+offset_left = 82.0
+offset_top = 72.0
+offset_right = 142.0
+offset_bottom = 172.0
+script = ExtResource("1_40mgl")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="1" unique_id=451631500]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 6.0
+offset_right = 50.0
+offset_bottom = 94.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 64
+bbcode_enabled = true
+text = "0"
+fit_content = true
+scroll_active = false
+
+[node name="up" type="Button" parent="1" unique_id=1859108826]
+layout_mode = 0
+offset_left = 5.0
+offset_top = -50.0
+offset_right = 29.0
+offset_bottom = -26.0
+scale = Vector2(2, 2)
+icon = ExtResource("2_hpkde")
+flat = true
+
+[node name="down" type="Button" parent="1" unique_id=104570080]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 101.0
+offset_right = 29.0
+offset_bottom = 125.0
+scale = Vector2(2, 2)
+icon = ExtResource("3_mx35c")
+flat = true
+
+[node name="2" type="ColorRect" parent="." unique_id=705881072]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 72.0
+offset_right = 228.0
+offset_bottom = 172.0
+script = ExtResource("1_40mgl")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="2" unique_id=477151480]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 6.0
+offset_right = 50.0
+offset_bottom = 94.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 64
+bbcode_enabled = true
+text = "0"
+fit_content = true
+scroll_active = false
+
+[node name="up" type="Button" parent="2" unique_id=864403527]
+layout_mode = 0
+offset_left = 5.0
+offset_top = -50.0
+offset_right = 29.0
+offset_bottom = -26.0
+scale = Vector2(2, 2)
+icon = ExtResource("2_hpkde")
+flat = true
+
+[node name="down" type="Button" parent="2" unique_id=2116036252]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 101.0
+offset_right = 29.0
+offset_bottom = 125.0
+scale = Vector2(2, 2)
+icon = ExtResource("3_mx35c")
+flat = true
+
+[node name="3" type="ColorRect" parent="." unique_id=1901694790]
+layout_mode = 0
+offset_left = 253.0
+offset_top = 72.0
+offset_right = 313.0
+offset_bottom = 172.0
+script = ExtResource("1_40mgl")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="3" unique_id=853892542]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 6.0
+offset_right = 50.0
+offset_bottom = 94.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 64
+bbcode_enabled = true
+text = "0"
+fit_content = true
+scroll_active = false
+
+[node name="up" type="Button" parent="3" unique_id=145403039]
+layout_mode = 0
+offset_left = 5.0
+offset_top = -50.0
+offset_right = 29.0
+offset_bottom = -26.0
+scale = Vector2(2, 2)
+icon = ExtResource("2_hpkde")
+flat = true
+
+[node name="down" type="Button" parent="3" unique_id=2132408921]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 101.0
+offset_right = 29.0
+offset_bottom = 125.0
+scale = Vector2(2, 2)
+icon = ExtResource("3_mx35c")
+flat = true
+
+[node name="4" type="ColorRect" parent="." unique_id=755550665]
+layout_mode = 0
+offset_left = 342.0
+offset_top = 72.0
+offset_right = 402.0
+offset_bottom = 172.0
+script = ExtResource("1_40mgl")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="4" unique_id=276788764]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 6.0
+offset_right = 50.0
+offset_bottom = 94.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 64
+bbcode_enabled = true
+text = "0"
+fit_content = true
+scroll_active = false
+
+[node name="up" type="Button" parent="4" unique_id=1527352722]
+layout_mode = 0
+offset_left = 5.0
+offset_top = -50.0
+offset_right = 29.0
+offset_bottom = -26.0
+scale = Vector2(2, 2)
+icon = ExtResource("2_hpkde")
+flat = true
+
+[node name="down" type="Button" parent="4" unique_id=1472057717]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 101.0
+offset_right = 29.0
+offset_bottom = 125.0
+scale = Vector2(2, 2)
+icon = ExtResource("3_mx35c")
+flat = true
+
+[connection signal="check" from="1" to="." method="_on__check"]
+[connection signal="pressed" from="1/up" to="1" method="_on_up_pressed"]
+[connection signal="pressed" from="1/down" to="1" method="_on_down_pressed"]
+[connection signal="check" from="2" to="." method="_on__check"]
+[connection signal="pressed" from="2/up" to="2" method="_on_up_pressed"]
+[connection signal="pressed" from="2/down" to="2" method="_on_down_pressed"]
+[connection signal="check" from="3" to="." method="_on__check"]
+[connection signal="pressed" from="3/up" to="3" method="_on_up_pressed"]
+[connection signal="pressed" from="3/down" to="3" method="_on_down_pressed"]
+[connection signal="check" from="4" to="." method="_on__check"]
+[connection signal="pressed" from="4/up" to="4" method="_on_up_pressed"]
+[connection signal="pressed" from="4/down" to="4" method="_on_down_pressed"]
