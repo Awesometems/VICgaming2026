@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://hqmdfg70qo30"]
+
+[ext_resource type="Script" uid="uid://7w51fhoymgtd" path="res://scripts/gear_puzzle.gd" id="1_ccke3"]
+[ext_resource type="Texture2D" uid="uid://siwwtjtl6xdj" path="res://assets/puzzle1gear.png" id="1_voev6"]
+[ext_resource type="PackedScene" uid="uid://dc2bnrgv3jxor" path="res://scenes/puzzle_piece.tscn" id="2_g7eoe"]
+
+[node name="GearPuzzle" type="Node2D" unique_id=675974120]
+script = ExtResource("1_ccke3")
+
+[node name="Puzzle1Gear" type="Sprite2D" parent="." unique_id=98238406]
+position = Vector2(48, 53)
+texture = ExtResource("1_voev6")
+
+[node name="PuzzlePiece" parent="." unique_id=326687614 instance=ExtResource("2_g7eoe")]
+position = Vector2(153, 61)
+
+[node name="PuzzlePiece2" parent="." unique_id=29658476 instance=ExtResource("2_g7eoe")]
+position = Vector2(183, 80)
+
+[node name="PuzzlePiece3" parent="." unique_id=1111164489 instance=ExtResource("2_g7eoe")]
+position = Vector2(150, 24)
+
+[node name="PuzzlePiece4" parent="." unique_id=1041704716 instance=ExtResource("2_g7eoe")]
+position = Vector2(188, 43)

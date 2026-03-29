@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dc2bnrgv3jxor"]
+
+[ext_resource type="Script" uid="uid://cnoqu1nku4hug" path="res://scripts/puzzle_piece.gd" id="1_7wynd"]
+[ext_resource type="Texture2D" uid="uid://dr4kklw5fwgmj" path="res://assets/puzzle1piece1.png" id="2_l7wtm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7wynd"]
+
+[node name="PuzzlePiece" type="RigidBody2D" unique_id=326687614]
+gravity_scale = 0.0
+script = ExtResource("1_7wynd")
+
+[node name="Button" type="Button" parent="." unique_id=1607649138]
+offset_left = -21.0
+offset_top = -16.0
+offset_right = 19.0
+offset_bottom = 16.0
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1763998865]
+modulate = Color(0.59837943, 0.59837943, 0.59837943, 1)
+texture = ExtResource("2_l7wtm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1402789907]
+shape = SubResource("RectangleShape2D_7wynd")
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]

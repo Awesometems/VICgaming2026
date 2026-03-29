@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dvu7g3j2xhkho"]
+
+[ext_resource type="PackedScene" uid="uid://78tvmu4nh2ki" path="res://scenes/ui.tscn" id="1_rtcog"]
+[ext_resource type="PackedScene" uid="uid://do28rq26nkphi" path="res://scenes/textbox.tscn" id="2_y6tbi"]
+
+[node name="EngineeringCart" type="Node2D" unique_id=649145467]
+
+[node name="Ui" parent="." unique_id=678580204 instance=ExtResource("1_rtcog")]
+
+[node name="Textbox" parent="." unique_id=1069674369 instance=ExtResource("2_y6tbi")]
+visible = false
