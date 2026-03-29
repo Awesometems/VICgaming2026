@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dkvkc3e86x1m1"]
+
+[ext_resource type="Script" uid="uid://c024t10f3ljf3" path="res://scripts/door.gd" id="1_uvdjg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5f452"]
+size = Vector2(20, 28)
+
+[node name="Door" type="Area2D" unique_id=63272494]
+script = ExtResource("1_uvdjg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=708159714]
+shape = SubResource("RectangleShape2D_5f452")
+
+[node name="Timer" type="Timer" parent="." unique_id=1189602514]
+wait_time = 1.5
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

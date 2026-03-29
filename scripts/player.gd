@@ -23,6 +23,9 @@ func _process(delta: float) -> void:
 func move(direction: Direction) -> bool:
 	if Map.canMove(currentLocation, direction):
 		currentLocation = Map.getNeighbor(currentLocation, direction)
+		# transition between rooms
+		#Transition.transition()
+		#await Transition.on_transition_finished
 		get_tree().change_scene_to_file(currentLocation)
 		return true
 	return false

@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://8dbc2r0d1k4c" path="res://assets/Notebook.png" id="8_ktti3"]
 
 [node name="Ui" type="Control" unique_id=678580204]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

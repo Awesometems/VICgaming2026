@@ -81,3 +81,13 @@ func defaulticons():
 	$key.scale.y = dkeyy
 	$gear.scale.x = dgearx
 	$gear.scale.y = dgeary
+
+
+# spawn the player into the scene at the correct position depending on what door was entered -------
+func _on_door_on_door_entered() -> void:
+	Tracking.door_entered = 1
+	Player.move(Player.Direction.LEFT)
+
+func _on_door_2_on_door_entered() -> void:
+	Tracking.door_entered = 0
+	Player.move(Player.Direction.RIGHT)

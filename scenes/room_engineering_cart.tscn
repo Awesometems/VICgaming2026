@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://biti701nv4jry"]
+[gd_scene format=3 uid="uid://dns20g3rfo80f"]
 
 [ext_resource type="Texture2D" uid="uid://kx5qiltotbqa" path="res://assets/engineering.png" id="1_4xg0k"]
 [ext_resource type="Script" uid="uid://dv7j03yb5cq7o" path="res://scripts/room_engineering_cart.gd" id="1_c64xs"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://do28rq26nkphi" path="res://scenes/textbox.tscn" id="2_y6tbi"]
 [ext_resource type="PackedScene" uid="uid://xk523lyapewu" path="res://scenes/player.tscn" id="4_i00n2"]
 [ext_resource type="Texture2D" uid="uid://bgl3421njkqkd" path="res://assets/crowbar.png" id="5_5hqh7"]
+[ext_resource type="PackedScene" uid="uid://dkvkc3e86x1m1" path="res://scenes/door.tscn" id="6_v57dg"]
 [ext_resource type="Texture2D" uid="uid://c60edmdu3oalv" path="res://assets/brokendove.png" id="7_5ucgq"]
 
 [node name="EngineeringCart" type="Node2D" unique_id=649145467]
@@ -29,7 +30,14 @@ flat = true
 position = Vector2(516, 439)
 
 [node name="Ui" parent="." unique_id=678580204 instance=ExtResource("1_rtcog")]
-visible = false
+
+[node name="Door" parent="." unique_id=63272494 instance=ExtResource("6_v57dg")]
+position = Vector2(87.00001, 561)
+scale = Vector2(2.1293201, 2.9693189)
+
+[node name="Door2" parent="." unique_id=232722694 instance=ExtResource("6_v57dg")]
+position = Vector2(1036.0001, 490)
+scale = Vector2(-2.8160272, -2.2160246)
 
 [node name="Textbox" parent="." unique_id=1069674369 instance=ExtResource("2_y6tbi")]
 visible = false
@@ -46,3 +54,5 @@ texture = ExtResource("7_5ucgq")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button" to="Ui" method="_on_button_pressed"]
+[connection signal="on_door_entered" from="Door" to="Ui" method="_on_door_on_door_entered"]
+[connection signal="on_door_entered" from="Door2" to="Ui" method="_on_door_2_on_door_entered"]

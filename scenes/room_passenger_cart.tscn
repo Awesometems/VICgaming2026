@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://78tvmu4nh2ki" path="res://scenes/ui.tscn" id="1_3gdin"]
 [ext_resource type="Script" uid="uid://ck1qlvfjw6c5n" path="res://scripts/room_passenger_cart.gd" id="1_16v7m"]
 [ext_resource type="Texture2D" uid="uid://qpeig6pte4xx" path="res://assets/passenger.png" id="1_kiq02"]
+[ext_resource type="PackedScene" uid="uid://dkvkc3e86x1m1" path="res://scenes/door.tscn" id="4_16v7m"]
 [ext_resource type="Texture2D" uid="uid://d0kgd2x4bwd72" path="res://assets/seat1.png" id="4_pj57o"]
 [ext_resource type="Texture2D" uid="uid://nl87j4eujvs8" path="res://assets/seat2.png" id="5_16v7m"]
 [ext_resource type="Texture2D" uid="uid://dhee73jyfb02k" path="res://assets/seat3.png" id="6_3dmfg"]
@@ -16,9 +17,19 @@ scale = Vector2(0.6, 0.6)
 texture = ExtResource("1_kiq02")
 
 [node name="Ui" parent="." unique_id=678580204 instance=ExtResource("1_3gdin")]
-visible = false
+
+[node name="Door" parent="." unique_id=63272494 instance=ExtResource("4_16v7m")]
+position = Vector2(71, 487)
+rotation = 0.06205394
+scale = Vector2(2.634625, 2.634625)
+
+[node name="Door2" parent="." unique_id=1934367598 instance=ExtResource("4_16v7m")]
+position = Vector2(1084, 571)
+rotation = 0.074608505
+scale = Vector2(1.5969272, 1.5969272)
 
 [node name="Border" type="Node2D" parent="." unique_id=1422222591]
+visible = false
 
 [node name="border" type="StaticBody2D" parent="Border" unique_id=2140545501]
 position = Vector2(3, 3)
@@ -67,5 +78,6 @@ polygon = PackedVector2Array(247, 550, 356, 559, 265, 647, 161, 644)
 position = Vector2(320, -6)
 polygon = PackedVector2Array(259, 566, 339, 573, 301, 654, 211, 651)
 
+[connection signal="on_door_entered" from="Door2" to="Ui" method="_on_door_2_on_door_entered"]
 [connection signal="body_entered" from="ZindexCollisions" to="." method="_on_zindex_collisions_body_entered"]
 [connection signal="body_exited" from="ZindexCollisions" to="." method="_on_zindex_collisions_body_exited"]

@@ -1,8 +1,19 @@
 extends Node2D
 
+@onready var player_scene := preload("res://scenes/player.tscn") 
+var player_instance
 var cursor = load("res://assets/interact.png")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	player_instance = player_scene.instantiate()
+	$"..".add_child(player_instance)
+	
+	if Tracking.door_entered == 1:
+		player_instance.set_position($Door.position - Vector2(30, 0))
+	else:
+		player_instance.set_position($Door2.position + Vector2(30, 0))
+		
+	
 	if !Tracking.crowbar:
 		$Button.disabled = false
 		$Button.visible = true
