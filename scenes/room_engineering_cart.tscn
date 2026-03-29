@@ -1,10 +1,11 @@
-[gd_scene format=3 uid="uid://dns20g3rfo80f"]
+[gd_scene format=3 uid="uid://biti701nv4jry"]
 
 [ext_resource type="Texture2D" uid="uid://kx5qiltotbqa" path="res://assets/engineering.png" id="1_4xg0k"]
 [ext_resource type="Script" uid="uid://dv7j03yb5cq7o" path="res://scripts/room_engineering_cart.gd" id="1_c64xs"]
 [ext_resource type="PackedScene" uid="uid://78tvmu4nh2ki" path="res://scenes/ui.tscn" id="1_rtcog"]
 [ext_resource type="PackedScene" uid="uid://do28rq26nkphi" path="res://scenes/textbox.tscn" id="2_y6tbi"]
 [ext_resource type="PackedScene" uid="uid://xk523lyapewu" path="res://scenes/player.tscn" id="4_i00n2"]
+[ext_resource type="Texture2D" uid="uid://bgl3421njkqkd" path="res://assets/crowbar.png" id="5_5hqh7"]
 
 [node name="EngineeringCart" type="Node2D" unique_id=649145467]
 script = ExtResource("1_c64xs")
@@ -14,8 +15,19 @@ position = Vector2(577, 326)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("1_4xg0k")
 
+[node name="Button" type="Button" parent="." unique_id=752557222]
+offset_left = 778.0
+offset_top = 326.0
+offset_right = 802.0
+offset_bottom = 350.0
+scale = Vector2(5.8074474, 2.36345)
+icon = ExtResource("5_5hqh7")
+flat = true
+
+[node name="Protagonist" parent="." unique_id=1541312863 instance=ExtResource("4_i00n2")]
+position = Vector2(516, 439)
+
 [node name="Ui" parent="." unique_id=678580204 instance=ExtResource("1_rtcog")]
-visible = false
 
 [node name="Textbox" parent="." unique_id=1069674369 instance=ExtResource("2_y6tbi")]
 visible = false
@@ -25,5 +37,5 @@ visible = false
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1408775315]
 polygon = PackedVector2Array(172, 447, 230, 447, 257, 436, 908, 437, 926, 449, 1003, 448, 1137, 652, 1153, 650, 1158, -3, -1, 0, 4, 681, 1154, 674, 1187, 646, 31, 647)
 
-[node name="Protagonist" parent="." unique_id=1541312863 instance=ExtResource("4_i00n2")]
-position = Vector2(516, 439)
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button" to="Ui" method="_on_button_pressed"]
